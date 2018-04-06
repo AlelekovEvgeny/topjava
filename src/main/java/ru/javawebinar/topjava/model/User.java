@@ -133,4 +133,15 @@ public class User extends AbstractNamedEntity {
                 ", caloriesPerDay=" + caloriesPerDay +
                 '}';
     }
+
+    @OneToMany(mappedBy = "user")
+    private Collection<Meal> meal;
+
+    public Collection<Meal> getMeal() {
+        return meal;
+    }
+
+    public void setMeal(Collection<Meal> meal) {
+        this.meal = meal;
+    }
 }

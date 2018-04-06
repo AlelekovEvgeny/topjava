@@ -1,11 +1,12 @@
 package ru.javawebinar.topjava.model;
 
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+@Entity
+@Table(name = "meals")
 public class Meal extends AbstractBaseEntity {
     private LocalDateTime dateTime;
 
@@ -14,6 +15,7 @@ public class Meal extends AbstractBaseEntity {
     private int calories;
 
     @ManyToOne(fetch = FetchType.LAZY)
+
     private User user;
 
     public Meal() {
