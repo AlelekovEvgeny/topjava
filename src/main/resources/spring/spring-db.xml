@@ -42,7 +42,8 @@
               p:driverClassName="org.postgresql.Driver"
               p:url="${database.url}"
               p:username="${database.username}"
-              p:password="${database.password}"/>
+              p:password="password"
+        />
     </beans>
 
     <beans profile="tomcat">
